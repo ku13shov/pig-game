@@ -137,6 +137,13 @@ main {
 .btn--hold {
   top: 46rem;
 }
+.btn--rules {
+  display: flex;
+  padding: 1.1rem 1rem;
+  top: 3rem;
+  left: auto;
+  right: 0;
+}
 
 .btn:active {
   transform: translate(-50%, 3px);
@@ -166,6 +173,39 @@ main {
 
 .hidden {
   display: none;
+}
+
+/* Popup */
+.rules-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.rules {
+  position: absolute;
+  background: #e49a0d;
+  width: 100%;
+  height: 100%;
+  max-width: 75rem;
+  max-height: 45rem;
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+}
+.rules__text {
+  font-size: 2rem;
+  color: #eee;
+  text-align: center;
+}
+.rules__text + .rules__text {
+  margin-top: 20px;
+}
+.rules__text--pig {
+  font-size: 9rem;
 }
 
 
