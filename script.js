@@ -11,6 +11,10 @@ const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 const player0Element = document.querySelector('.player--0');
 const player1Element = document.querySelector('.player--1');
+const btnRules = document.querySelector('.btn--rules');
+const rulesPopup = document.querySelector('.rules');
+const rulesPopupOverlay = document.querySelector('.rules-overlay');
+const rulesPopupClose = document.querySelector('.rules__popup-close');
 
 // Game initial conditions
 
@@ -33,6 +37,16 @@ const initGame = function () {
   player0Element.classList.add('player--active');
   diceElement.classList.add('hidden');
 };
+
+const showRulesPopup = function() {
+  rulesPopup.classList.add('active');
+  rulesPopupOverlay.classList.add('active');
+}
+
+const hideRulesPopup = function() {
+  rulesPopup.classList.remove('active');
+  rulesPopupOverlay.classList.remove('active');
+}
 
 initGame();
 
@@ -90,3 +104,9 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNew.addEventListener('click', initGame);
+
+btnRules.addEventListener('click', showRulesPopup);
+
+rulesPopupClose.addEventListener('click', hideRulesPopup);
+
+rulesPopupOverlay.addEventListener('click', hideRulesPopup);
